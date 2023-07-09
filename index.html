@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container  my-5 w-50 p-3 ">
+        <div class="row bg-info bg-gradient my-4 p-3 rounded">
+
+
+            <!-- <form class="form"> -->
+            <div class="mb-3">
+                <label for="ProductName" class="form-label">Product name</label>
+                <input type="text" class="form-control" id="ProductName" placeholder="Enter Product name"
+                    name="Product name" value="" />
+            </div>
+            <div class="mb-3">
+                <label for="ProductPrice" class="form-label">Product price</label>
+                <input type="number" class="form-control" id="ProductPrice" placeholder="Enter Product price"
+                    name="Product price" value="" />
+            </div>
+            <div class="mb-3">
+                <label for="ProductCategory" class="form-label">Product category</label>
+                <input type="text" class="form-control" id="ProductCategory" placeholder="Enter Product category"
+                    name="Product category" value="" />
+            </div>
+            <div class="mb-3">
+                <label for="ProductDescription" class="form-label">Product description</label>
+                <textarea class="form-control" name="Product description" id="ProductDescription" cols="30" rows="5"
+                    value="" placeholder="Enter Product description"></textarea>
+            </div>
+            <button onclick="addNewProduct()" id="button" name="submit" class="btn btn-outline-success"> ADD </button>
+            <input onkeyup="searchMethod(this.value)" type="text" class="form-control my-4" placeholder="Search" value="" id="inputSearch" name="inputSearch">
+            <!-- </form> -->
+
+
+
+        </div>
+        <div class="row">
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">Index</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Update</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody  id="content">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
